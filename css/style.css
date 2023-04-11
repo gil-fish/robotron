@@ -2,6 +2,12 @@
     --main-cinza: #CCCCCC;
     --main-branco: #FFFFFF;
     --main-preto: #000000;
+    --azul: #66B2FF;
+    --vermelho: #FF0000;
+    --amarelo: #FFFF00;
+    --branco: #FFFFFF;
+    --rosa: #FF99CC;
+    --preto-degrade: rgba(0, 0, 0, 0.6);
 }
 
 * {
@@ -17,7 +23,8 @@ body {
     font-weight: 300;
 }
 
-body, input {
+body,
+input {
     font-family: 'Teko', sans-serif;
 }
 
@@ -37,11 +44,61 @@ main {
     position: relative;
 }
 
+.botoes {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 0.5rem;
+}
+
+input[type="button"] {
+    background-color: var(--preto-degrade);
+    border: none;
+    padding: 0 10px;
+    color: var(--main-branco);
+    font-size: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 350;
+    clip-path: polygon(calc(100% - 10px) 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 calc(100% - 10px), 0 10px, 10px 0);
+}
+
+#preto {
+    background-color: var(--main-preto);
+}
+
+#azul {
+    background-color: var(--azul);
+}
+
+#vermelho {
+    background-color: var(--vermelho);
+}
+
+#amarelo {
+    background-color: var(--amarelo);
+}
+
+#branco {
+    background-color: var(--branco);
+}
+
+#rosa {
+    background-color: var(--rosa);
+}
+
+.cor_robo {
+    border-radius: 20%;
+    width: 25px;
+    height: 25px;
+    z-index: 999;
+}
+
 .robo {
-    height: 110%;
+    height: 100%;
     z-index: 1;
     position: absolute;
-    left: -20%;
+    left: -5%;
     top: -5%;
 }
 
@@ -50,20 +107,21 @@ main {
     font-weight: 500;
     font-size: 130px;
     position: absolute;
-    bottom: 7rem;
+    bottom: 1rem;
     left: -3rem;
     line-height: 0.8;
     writing-mode: vertical-rl;
     text-orientation: mixed;
-    color: rgba(255,255,255,0.8)
+    color: rgba(255, 255, 255, 0.8)
 }
 
 .box {
-    background: rgba(0,0,0,0.6);
+    background: rgba(0, 0, 0, 0.6);
     clip-path: polygon(calc(100% - 30px) 0, 100% 30px, 100% calc(100% - 30px), calc(100% - 30px) 100%, 30px 100%, 0 calc(100% - 30px), 0 30px, 30px 0);
     border-left: 5px solid var(--main-cinza);
     height: 80%;
 }
+
 
 /****************************** Equipamentos *****/
 
@@ -72,7 +130,8 @@ main {
 }
 
 .montador {
-    height: 100%;;
+    height: 100%;
+    ;
 }
 
 .montador-conteudo {
@@ -149,8 +208,8 @@ main {
 }
 
 
-
 /****************************** Estatísticas *****/
+
 .estatisticas {
     flex-basis: 23%;
     padding: 2em 2em 0;
@@ -210,7 +269,7 @@ main {
 }
 
 @media screen and (max-width: 1600px) {
-    body { 
+    body {
         font-size: 14px;
     }
     main {
@@ -221,10 +280,9 @@ main {
 }
 
 @media screen and (max-width: 1200px) {
-    body { 
+    body {
         font-size: 13px;
     }
-
     main {
         width: 96vw;
         height: 80vh;

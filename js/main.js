@@ -56,3 +56,16 @@ function atualizaEstatisticas(peca) {
     })
 
 }
+
+const cor = document.querySelectorAll(".cor_robo");
+
+cor.forEach((elemento) => {
+    elemento.addEventListener("click", (evento) => {
+        escolheCor(evento.target.id)
+    })
+})
+
+function escolheCor(escolha) {
+    const mudacor = document.getElementById("robotron");
+    mudacor.src = "img/Robotron 2000 - " + escolha + ".png";
+}
