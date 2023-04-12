@@ -67,5 +67,5 @@ cor.forEach((elemento) => {
 
 function escolheCor(escolha) {
     const mudacor = document.getElementById("robotron");
-    mudacor.src = "img/Robotron 2000 - " + escolha + ".png";
+    mudacor.src="img/Robotron 2000 - " + escolha + ".png";
 }
